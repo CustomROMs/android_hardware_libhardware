@@ -395,6 +395,8 @@ struct audio_stream_out {
 };
 typedef struct audio_stream_out audio_stream_out_t;
 
+struct audio_broadcast_stream;
+
 struct audio_stream_in {
     /**
      * Common methods of the audio stream in.  This *must* be the first member of audio_stream_in
