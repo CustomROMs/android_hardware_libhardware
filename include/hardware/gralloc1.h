@@ -159,6 +159,11 @@ typedef enum {
     GRALLOC1_FUNCTION_GET_TRANSPORT_SIZE = 24,
     GRALLOC1_FUNCTION_IMPORT_BUFFER = 25,
     GRALLOC1_LAST_FUNCTION = 25,
+/*#ifdef STE_HARDWARE
+    GRALLOC1_LAST_FUNCTION = 23,
+#else
+    GRALLOC1_LAST_FUNCTION = 22,
+#endif*/
 } gralloc1_function_descriptor_t;
 
 typedef enum {
