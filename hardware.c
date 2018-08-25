@@ -205,9 +205,13 @@ int hw_get_module_by_class(const char *class_id, const char *inst,
         goto found;
     }
 
+    ALOGE("%s: module %s not found!", __func__, class_id);
+
     return -ENOENT;
 
 found:
+    ALOGE("%s: loading module, path = %s", __func__, path);
+
     /* load the module, if this fails, we're doomed, and we should not try
      * to load a different variant. */
     return load(class_id, path, module);
